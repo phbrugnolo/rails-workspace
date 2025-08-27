@@ -33,9 +33,9 @@ sudo tee ~/pgadmin_servers/servers.json << 'EOF'
       "Group": "Servers",
       "Host": "postgresql",
       "Port": 5432,
+      "MaintenanceDB": "my_app_development",
       "Username": "postgres",
-      "Password": "postgres",
-      "DBname": "dev_db"
+      "SSLMode": "prefer"
     }
   }
 }
@@ -56,7 +56,7 @@ if [ ! "$(docker ps -q -f name=postgresql)" ]; then
       -p 5432:5432 \
       -e POSTGRES_PASSWORD=postgres \
       -e POSTGRES_USER=postgres \
-      -e POSTGRES_DB=dev_db \
+      -e POSTGRES_DB=my_app_development \
       -v pgdata:/var/lib/postgresql/data \
       postgres:17-alpine
   fi
