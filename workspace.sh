@@ -167,7 +167,7 @@ nvm install-latest-npm
 npm install -g yarn
 
 # Development Profile
-sudo tee /etc/profile.d/social.sh << 'EOF'
+sudo tee /etc/profile.d/dev.sh << 'EOF'
 #!/bin/bash
 
 export LANG=C.UTF-8
@@ -177,7 +177,7 @@ export RAILS_ENV=development
 export NODE_ENV=development
 EOF
 
-sudo chmod +x /etc/profile.d/social.sh && source /etc/profile.d/social.sh
+sudo chmod +x /etc/profile.d/dev.sh && source /etc/profile.d/dev.sh
 
 # Git Credential Manager
 GCM_LATEST_VERSION=$(curl -s https://api.github.com/repos/git-ecosystem/git-credential-manager/releases/latest | jq -r .tag_name | sed 's/^v//')
