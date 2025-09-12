@@ -70,7 +70,7 @@ if [ ! "$(docker ps -q -f name=pgAdmin)" ]; then
   else
     docker container run --name pgAdmin --restart always -d \
       --network postgresql_development \
-      -p 9000:80 \
+      -p 8080:80 \
       -e PGADMIN_CONFIG_SERVER_MODE=False \
       -e PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED=False \
       -e PGADMIN_DEFAULT_EMAIL=admin@admin.com \
