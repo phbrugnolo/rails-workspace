@@ -93,9 +93,9 @@ curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 \curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 sudo apt update
-rvm install 3.4.5
+rvm install 3.4.6
 rvm docs generate-ri
-rvm --default use 3.4.5
+rvm --default use 3.4.6
 rvm gemset create dev
 rvm gemset use dev
 gem install bundler
