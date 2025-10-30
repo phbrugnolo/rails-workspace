@@ -99,8 +99,6 @@ rvm --default use 3.4.6
 rvm gemset create dev
 rvm gemset use dev
 gem install bundler
-bundle config --global timeout 10000
-bundle config --global retry 10000
 gem install rails
 
 sudo tee /etc/profile.d/rvm.sh << 'EOF'
