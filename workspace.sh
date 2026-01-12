@@ -3,7 +3,7 @@ source ~/.bashrc
 
 # Update and install dependencies
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl gpg gcc g++ make zip plocate jq -y
+sudo apt install curl gpg gcc g++ make zip plocate jq git net-tools build-essential dirmngr vim libice6 libsm6 -y
 
 # docker installation
 sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
